@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Genetic Algorithm Serbia Lottery 7/39 prediction 
+Genetic Algorithm prediction Serbia Lottery 7/39
 """
 
 import sys
@@ -14,7 +14,7 @@ from geneticalgorithm2 import GeneticAlgorithm2 as ga
 # -------------------------------------------------
 # PARAMETERS
 # -------------------------------------------------
-csv_file = "/Users/4c/Desktop/GHQ/data/loto7_4564_k13.csv"  
+csv_file = "/data/loto7_4564_k13.csv"  
 # CSV sa 4564 prethodnih kombinacija, kolone: num1,num2, ... ,num7
 
 num_numbers = 7
@@ -126,7 +126,7 @@ _ 97.3% GA is running...248 gen from 255...be||||||||||||||||||||
   
 
  The best found solution:
- [ 2.  8. 13. 21. 27. 33. 39.]
+ [ 2.  8. x. y. z. 33. 39.]
 
  Objective function:
  2477.0
@@ -134,17 +134,11 @@ _ 97.3% GA is running...248 gen from 255...be||||||||||||||||||||
  Used generations: 255
  Used time: 8.74e+03 seconds
 
-Predicted next loto 7/39 combination: [ 2  8 13 21 27 33 39]
+Predicted next loto 7/39 combination: [ 2  8 x y z 33 39]
 """
 
 # -------------------------------------------------
 # SAVE RESULT TO CSV
 # -------------------------------------------------
 pd.DataFrame([best_candidate_sorted], columns=[f'num{i+1}' for i in range(num_numbers)]) \
-    .to_csv("/Users/4c/Desktop/GHQ/data/loto_prediction.csv", index=False)
-
-
-
-# https://github.com/PasaOpasen/geneticalgorithm2
-
-# https://pasaopasen.github.io/geneticalgorithm2/geneticalgorithm2/geneticalgorithm2.html
+    .to_csv("/data/loto_prediction.csv", index=False)
