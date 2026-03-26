@@ -14,7 +14,7 @@ from geneticalgorithm2 import GeneticAlgorithm2 as ga
 # -------------------------------------------------
 # PARAMETERS
 # -------------------------------------------------
-csv_file = "/Users/4c/Desktop/GHQ/data/loto7_4586_k24.csv"  
+csv_file = "/data/loto7_4586_k24.csv"  
 # CSV sa 4586 prethodnih kombinacija, kolone: num1,num2, ... ,num7
 
 num_numbers = 7
@@ -148,7 +148,7 @@ Predicted next loto 7/39 combination: [ 2  8 x y z 33 39]
 # SAVE RESULT TO CSV
 # -------------------------------------------------
 pd.DataFrame([best_candidate_sorted], columns=[f'num{i+1}' for i in range(num_numbers)]) \
-    .to_csv("/Users/4c/Desktop/GHQ/data/loto_prediction.csv", index=False)
+    .to_csv("/data/loto_prediction.csv", index=False)
 
 
 
